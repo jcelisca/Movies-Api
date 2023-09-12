@@ -16,6 +16,13 @@
       </mat-list-item>
 
       <mat-list-item
+        [routerLink]="'./list'"
+        (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon fontIcon="favorite"></mat-icon>
+        Favoritos
+      </mat-list-item>
+
+      <mat-list-item
         [routerLink]="'./search'"
         (click)="sidenav.toggle()">
         <mat-icon matListItemIcon>search</mat-icon>
@@ -23,19 +30,22 @@
       </mat-list-item>
 
       <mat-list-item
-        (click)="sidenav.toggle()">
+        [routerLink]="'./list'"
+        (click)="findByCategory('now_playing')">
         <mat-icon matListItemIcon fontIcon="cast_connected"></mat-icon>
         En cartelera
       </mat-list-item>
 
       <mat-list-item
-        (click)="sidenav.toggle()">
+        [routerLink]="'./list'"
+        (click)="findByCategory('top_rated')">
         <mat-icon matListItemIcon fontIcon="star_rate"></mat-icon>
         Mejor valoradas
       </mat-list-item>
 
       <mat-list-item
-        (click)="sidenav.toggle()">
+        [routerLink]="'./list'"
+        (click)="findByCategory('upcoming')">
         <mat-icon matListItemIcon fontIcon="upcoming"></mat-icon>
         Proximamente
       </mat-list-item>

@@ -14,8 +14,8 @@ export class MoviesEffects {
   getMovies$ = createEffect(() =>
     this.actions$.pipe(
       ofType(actions.getMovies),
-      switchMap(() =>
-        this.movieService.getMovies().pipe(
+      switchMap((action) =>
+        this.movieService.getMovies(action.category).pipe(
           map((response) => actions.getMoviesSuccess({ response })),
           catchError((error)=> of(actions.getMoviesFailed({ error })))
         )

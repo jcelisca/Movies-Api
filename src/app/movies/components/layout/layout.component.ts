@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { selectUserFeatureState } from 'src/app/core/state/selectors/user.selector';
 import { UserState } from 'src/app/core/state/features/user/user.feature';
+import { getMovies } from 'src/app/core/state/actions/movies.action';
 
 @Component({
   selector: 'app-layout',
@@ -15,6 +16,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   pressButton = false;
   notifier$: Subject<any> = new Subject();
+
   constructor(
     private readonly store: Store,
     private router: Router
@@ -23,11 +25,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscriptionUser();
   }
-
-  public sidebarItems = [
-    { label: 'Listado', icon: 'label', url: './list' },
-    { label: 'Buscar', icon: 'search', url: './search' }
-  ]
 
   private subscriptionUser(){
     this.store.select(selectUserFeatureState)
@@ -43,6 +40,10 @@ export class LayoutComponent implements OnInit, OnDestroy {
   logOut() {
     this.pressButton = true;
     this.store.dispatch(actions.logOut());
+  }
+
+  findByCategory(category: string){
+    this.store.dispatch(getMovies({ category }));
   }
 
   ngOnDestroy(): void {

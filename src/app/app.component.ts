@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('user')){
-      this.store.dispatch(getMovies());
+      this.store.dispatch(getMovies({ category: 'popular'}));
       this.store.dispatch(actions.loadUser({ uid: localStorage.getItem('user')}));
     }
   }

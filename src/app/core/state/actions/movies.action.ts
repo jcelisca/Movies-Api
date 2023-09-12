@@ -3,7 +3,8 @@ import { Movie, ResponseApi } from "../../domain/movies.interface";
 import { ErrorData } from "../../domain/error.interface";
 
 export const getMovies = createAction(
-  '[Movies List Component] GetMovies'
+  '[Movies List Component] GetMovies',
+  props<{ category: string }>()
 );
 
 export const getMoviesSuccess = createAction(

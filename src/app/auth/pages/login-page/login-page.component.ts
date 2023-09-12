@@ -51,7 +51,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
         }
         if(state.login && state.uid){
           localStorage.setItem('user', state.uid);
-          this.store.dispatch(getMovies());
+          this.store.dispatch(getMovies({ category: 'popular'}));
           this.router.navigate(['/movies/list']);
         }
       })
@@ -88,7 +88,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
   validateLogUser(){
     if(localStorage.getItem('user')){
-      this.store.dispatch(getMovies());
+      this.store.dispatch(getMovies({ category: 'popular'}));
       this.store.dispatch(actions.loadUser({ uid: localStorage.getItem('user')}));
     }
   }
