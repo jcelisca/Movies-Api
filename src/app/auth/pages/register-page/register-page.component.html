@@ -1,0 +1,41 @@
+<div class="container">
+  <form [formGroup]="registerForm">
+    <div class="form">
+      <h1 class="title">Registro</h1>
+
+      <mat-form-field class="input">
+        <mat-label>Correo</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder="Correo de usuario"
+          [formControl]="registerForm.email">
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Contraseña"
+          [formControl]="registerForm.password">
+      </mat-form-field>
+
+      <button
+        mat-button
+        mat-flat-button
+        color="primary"
+        class="button"
+        (click)="createUser()">
+        <mat-icon>save</mat-icon>
+        Crear cuenta
+      </button>
+
+    </div>
+  </form>
+
+  <div class="link">
+    <a routerLink="/auth/login">¿Ya tienes cuenta?</a>
+  </div>
+</div>
+

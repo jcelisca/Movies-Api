@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "movies-142fe": {
+      "hosting": {
+        "reto-angularv2": [
+          "movies-142fe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "movies-142fe"
+  }
+}

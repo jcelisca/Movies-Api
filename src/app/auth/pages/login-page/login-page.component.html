@@ -1,0 +1,55 @@
+<div class="contenedor">
+  <form [formGroup]="loginForm">
+    <div class="form">
+      <h1 class="title">Login</h1>
+
+      <mat-form-field class="input">
+        <mat-label>Correo</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder="Correo de usuario"
+          [formControl]="loginForm.email">
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Contraseña"
+          [formControl]="loginForm.password">
+      </mat-form-field>
+
+      <button
+        mat-button
+        mat-flat-button
+        color="primary"
+        class="button"
+        (click)="logIn()">
+        <mat-icon>input</mat-icon>
+        Ingresar
+      </button>
+
+      <button
+        mat-button
+        mat-flat-button
+        color="primary"
+        class="googleButton"
+        (click)="logInWithGoogle()"
+        >
+        <img
+          src="../../../../assets/google.png"
+          alt="x"
+          class="image"
+          />
+        Login With Google
+      </button>
+
+    </div>
+  </form>
+
+  <div class="link">
+    <a routerLink="/auth/register">¿No tienes cuenta?</a>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="buttons">
+  <button
+    mat-button
+    mat-flat-button
+    color="primary"
+    (click)="previousPage()">
+    <mat-icon fontIcon="keyboard_double_arrow_left"></mat-icon>
+    Anterior
+  </button>
+  <button
+    mat-button
+    mat-flat-button
+    color="primary"
+    (click)="nextPage()">
+    <mat-icon fontIcon="keyboard_double_arrow_right"></mat-icon>
+    Siguiente
+  </button>
+</div>
+
+<div class="grid bm-8 pt-2">
+  <div *ngFor="let movie of movies"
+  class="col-12 sm:col-6 md:col-3"
+  >
+  <app-card-movie [movie]="movie"></app-card-movie>
+</div>
+</div>
+
+<div class="buttons">
+  <button
+    mat-button
+    mat-flat-button
+    color="primary"
+    (click)="previousPage()">
+    <mat-icon fontIcon="keyboard_double_arrow_left"></mat-icon>
+    Anterior
+  </button>
+  <button
+    mat-button
+    mat-flat-button
+    color="primary"
+    (click)="nextPage()">
+    <mat-icon fontIcon="keyboard_double_arrow_right"></mat-icon>
+    Siguiente
+  </button>
+</div>

@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.input {
+  max-width: 25rem;
+  width: 100%;
+}
+
+.button {
+  width: 8rem;
+}
+
+.link {
+  margin-top: 2rem;
+  margin-right: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contenedor {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+.googleButton {
+  margin-top: 3%;
+  width: 15rem;
+}
+
+.image {
+  width: 18%;
+}

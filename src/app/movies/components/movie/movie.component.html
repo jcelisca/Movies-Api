@@ -1,0 +1,46 @@
+<div class="grid p-2">
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+      <mat-card-title>{{ movie?.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie?.tagline }}</mat-card-subtitle>
+    </mat-card-header>
+
+
+    <img
+      [src]="getImage(movie?.poster_path)"
+      [alt]="movie?.original_title"
+      mat-card-image
+      />
+
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6 info">
+    <mat-card-header class="header">
+      <mat-card-title>Información</mat-card-title>
+      <mat-card-subtitle>{{ movie?.overview }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item><strong>Popularidad </strong> {{ movie?.popularity }}</mat-list-item>
+        <mat-list-item><strong>Recaudación </strong> {{ movie?.revenue | currency : 'USD' }}</mat-list-item>
+        <mat-list-item><strong>Fecha de estreno</strong> {{ movie?.release_date }}</mat-list-item>
+        <mat-list-item><strong>Duración</strong> {{ movie?.runtime }} minutos</mat-list-item>
+      </mat-list>
+
+      <button
+        mat-button
+        color="warn"
+        (click)="goBack()"
+      >
+        Regresar
+      </button>
+
+    </mat-card-content>
+
+  </mat-card>
+
+
+</div>

@@ -1,0 +1,15 @@
+<div class="dialog">
+  <h1 mat-dialog-title class="title">{{dataModal.title}}</h1>
+  <div mat-dialog-content class="message">
+    <p>{{dataModal.message}}</p>
+  </div>
+  <div mat-dialog-actions class="button">
+    <button
+      mat-button
+      mat-flat-button
+      color="warning"
+      (click)="onConfirm()"
+      cdkFocusInitial>
+      Cerrar</button>
+  </div>
+</div>

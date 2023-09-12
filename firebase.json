@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "reto-angularv2",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

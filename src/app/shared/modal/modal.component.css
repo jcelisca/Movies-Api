@@ -1,0 +1,10 @@
+.dialog {
+  width: 25rem;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+  margin-top: 10%;
+}
